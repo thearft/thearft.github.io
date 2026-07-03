@@ -67,7 +67,7 @@ export function Hero() {
                 brief="portrait — direct eye contact, natural light, warehouse shelving softly out of focus"
                 src="/images/portrait.jpg"
                 alt="Md. Arafat Hossain"
-                className="absolute inset-0"
+                className="h-full w-full"
                 priority
                 sizes="(min-width: 1024px) 480px, 100vw"
               />
