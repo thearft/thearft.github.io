@@ -27,8 +27,8 @@ export const SOCIAL = {
   linkedin: null as string | null,
 };
 
-/** "[X] years" in the short story — TODO(Arafat): company operating years */
-export const COMPANY_YEARS: string | null = null;
+/** Company operating years in the short story (confirmed by Arafat, 2026-07-03) */
+export const COMPANY_YEARS: string | null = "45+";
 
 /** "[12] years" of ledgers on the Platform card — TODO(Arafat): confirm figure */
 export const LEDGER_YEARS: string | null = null;
