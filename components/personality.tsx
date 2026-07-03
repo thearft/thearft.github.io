@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /** Humor lives here and in /notes only — never in trust sections (CLAUDE.md §3). */
 export function Personality() {
   return (
@@ -12,7 +14,12 @@ export function Personality() {
         <span className="font-mono text-[12.5px] leading-[1.8] text-steel">
           F1 for the strategy, football for the heartbreak, Dota 2 for reasons
           I’ve stopped defending, and photography —{" "}
-          <span className="text-cream">every photo on this site is mine.</span>
+          <Link
+            href="/photos"
+            className="border-b border-ice/30 pb-px text-cream transition-colors duration-[250ms] hover:border-copper-warm/50 hover:text-copper-warm"
+          >
+            every photo on this site is mine.
+          </Link>
         </span>
       </p>
     </div>
