@@ -15,20 +15,16 @@ export const SITE_DESCRIPTION =
    without a URL are simply not rendered. */
 
 export const CONTACT = {
-  /** Business email for the doors — TODO(Arafat) */
-  email: null as string | null,
+  /** Interim per Arafat (2026-07-03) — switches to a domain address later */
+  email: "thearft@gmail.com" as string | null,
   /** WhatsApp link, e.g. "https://wa.me/<number>" — TODO(Arafat) */
   whatsapp: null as string | null,
 };
 
 export const SOCIAL = {
   github: "https://github.com/thearft",
-  /** TODO(Arafat): confirm LinkedIn URL */
-  linkedin: null as string | null,
+  linkedin: "https://www.linkedin.com/in/thearft/" as string | null,
 };
 
 /** Company operating years in the short story (confirmed by Arafat, 2026-07-03) */
 export const COMPANY_YEARS: string | null = "45+";
-
-/** "[12] years" of ledgers on the Platform card — TODO(Arafat): confirm figure */
-export const LEDGER_YEARS: string | null = null;

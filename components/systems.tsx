@@ -3,7 +3,6 @@ import { arrowLink } from "@/components/cta";
 import { SectionHeading } from "@/components/section-heading";
 import { StatusBadge } from "@/components/status";
 import { revealDelay } from "@/lib/reveal";
-import { LEDGER_YEARS } from "@/lib/site";
 
 const CARD =
   "flex flex-col gap-3.5 bg-panel p-[clamp(24px,3vw,36px)] shadow-[-1px_0_0_rgba(169,215,232,0.10),0_-1px_0_rgba(169,215,232,0.10)]";
@@ -75,14 +74,11 @@ export function Systems() {
             <h3 className="font-display text-[26px] font-normal tracking-[-0.01em] text-cream">
               The Platform
             </h3>
+            {/* Ledger-years count deliberately unstated (Arafat, 2026-07-03) */}
             <p className="text-[15.5px] font-light leading-[1.7] text-body">
               A full point-of-sale and business-management system, in active
-              development — with{" "}
-              <span className="font-mono text-[0.88em] text-copper-soft">
-                {LEDGER_YEARS ?? "[12]"}
-              </span>{" "}
-              years of purchase ledgers already migrated from Excel into a
-              clean database.
+              development — with years of purchase ledgers already rescued from
+              Excel into a clean database.
             </p>
           </li>
         </ul>

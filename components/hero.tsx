@@ -63,9 +63,10 @@ export function Hero() {
         <div data-reveal style={revealDelay(120)} className="justify-self-stretch">
           <div className="ml-auto max-w-[480px] border border-ice/[0.14] p-2.5">
             <div className="relative aspect-[4/5]">
-              {/* TODO(Arafat): portrait — brief below, from the copy deck */}
               <ImageSlot
                 brief="portrait — direct eye contact, natural light, warehouse shelving softly out of focus"
+                src="/images/portrait.jpg"
+                alt="Md. Arafat Hossain"
                 className="absolute inset-0"
                 priority
                 sizes="(min-width: 1024px) 480px, 100vw"
