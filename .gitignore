@@ -14,3 +14,8 @@ npm-debug.log*
 # old portfolio (separate git clone, kept locally for reference only —
 # it is what this site replaces on GitHub Pages)
 thearft.github.io/
+
+# raw photo handoffs — originals stay local; the site ships processed,
+# EXIF/GPS-stripped copies from public/images/
+Photos-3-001/
+macro shot.png

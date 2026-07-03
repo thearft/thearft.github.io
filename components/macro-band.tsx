@@ -1,9 +1,9 @@
 import { CycleBand } from "@/components/cycle-band";
 import { ImageSlot } from "@/components/image-slot";
 
-/** Real photo once shot: set to e.g. "/images/parts-macro.jpg".
- *  Brief (§7): parts macro — compressors, capacitors, copper fittings. */
-const MACRO_PHOTO: string | null = null;
+/** Interim generated image under Arafat's one-time exception (2026-07-03);
+ *  replace with his own parts-macro photograph when shot (§7 brief). */
+const MACRO_PHOTO: string | null = "/images/parts-macro.jpg";
 
 /** Full-bleed band between story and systems. Decorative. */
 export function MacroBand() {
