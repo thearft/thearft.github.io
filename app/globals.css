@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Design tokens from the Claude Design handoff (docs/design/) —
+   ice + copper on cold charcoal: refrigerant and pipework. */
+@theme {
+  --color-ink: #0c1013; /* base background */
+  --color-panel: #0f1519; /* systems band */
+  --color-night: #0b0f12; /* text on ice */
+  --color-cream: #eae6df; /* primary text */
+  --color-body: #a9b3ba; /* body text */
+  --color-quote: #d8dee1; /* epigraph */
+  --color-emph: #dce1e4; /* in-paragraph emphasis */
+  --color-plate: #cfe3ec; /* nameplate values */
+  --color-steel: #8d99a1; /* secondary text */
+  --color-steel-dim: #7a8790; /* labels */
+  --color-mist: #79868e; /* muted display line */
+  --color-ice: #a9d7e8; /* primary accent — the refrigerant */
+  --color-ice-bright: #c6e7f2;
+  --color-copper: #b87b5e; /* secondary accent — the tubing */
+  --color-copper-soft: #c98f6b;
+  --color-copper-warm: #d9a07e;
+
+  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Engraved-metal plate */
+  --shadow-plate:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 18px 40px -30px rgba(0, 0, 0, 0.85);
+  --shadow-plate-hover:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 22px 55px -30px rgba(89, 155, 180, 0.28);
+
+  --animate-pulse-soft: pulse-soft 2.2s ease-in-out infinite;
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  ::selection {
+    background: var(--color-ice);
+    color: var(--color-night);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ice);
+    outline-offset: 3px;
+  }
+}
+
+/* Scroll-reveal. Elements are hidden only once JS is confirmed present
+   (html.js, set by the inline bootstrap before first paint), so nothing is
+   ever lost without JavaScript. RevealManager adds .is-revealed per element;
+   .reveal-all is the watchdog if hydration never happens. Reduced motion
+   disables the whole mechanism. */
+@layer components {
+  html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  html.js [data-reveal].is-revealed,
+  html.js.reveal-all [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.js [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}

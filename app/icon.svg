@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Candidate favicon pending Arafat's approval (§9): the wordmark's "a." -->
+  <rect width="64" height="64" rx="8" fill="#0C1013"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="6.5" fill="none" stroke="#A9D7E8" stroke-opacity="0.22"/>
+  <text x="27" y="46" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="40" fill="#EAE6DF" text-anchor="middle">a</text>
+  <circle cx="46" cy="43" r="4.5" fill="#B87B5E"/>
+</svg>
