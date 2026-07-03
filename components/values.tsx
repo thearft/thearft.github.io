@@ -31,8 +31,8 @@ export function Values() {
         className="mb-[clamp(48px,7vh,72px)]"
       />
 
-      {/* Epigraph ships only with the translation Arafat confirms (CLAUDE.md §2.4).
-          Text below is from the approved copy deck, pending final confirmation. */}
+      {/* Translation confirmed by Arafat 2026-07-03 (CLAUDE.md §2.4) —
+          do not restyle or paraphrase. */}
       <figure data-reveal className="mx-auto max-w-[780px] text-center">
         <blockquote className="font-display text-[clamp(21px,2.5vw,30px)] font-normal italic leading-[1.5] text-quote text-pretty">
           <span aria-hidden className="text-copper">
